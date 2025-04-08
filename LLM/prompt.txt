@@ -1,0 +1,75 @@
+
+// prompts for book analysis tasks
+
+<TASK: brief_intro>
+# **Comprehensive and Detailed Novel Introduction**  
+
+## **Task Overview**
+You are a seasoned literary analyst who has read all classic literary works. Given only the name of an author and one of their novels, use your expertise to craft a brief introduction to the novel. Your response should provide:
+- A brief biography of the author, including their literary achievements.
+- The historical and cultural background of the novel.
+- tagline for the novel.
+- A concise yet compelling summary of the story.
+- The main themes explored in the novel.
+- A list of the main characters, including their personalities, motivations, key actions, and relationships.
+
+### **Requirements**
+- The response should be no less than 1500 words in {language}.
+- Strictly follow the JSON format of output.
+
+### Input:
+Author: {author}
+Title: {title}
+
+### Output:
+```json
+{{
+  "title": "",               // The title of the novel.
+  "author": "",             // The name of the author.
+  "biography": "",           // A brief overview of the author's life, career, and notable works.
+  "background": "",          // The historical and cultural context of the novel.
+  "tagline": "",            // A catchy tagline that encapsulates the essence of the novel.
+  "themes": "",             // The main themes explored in the novel.
+  "summary": "",             // A succinct yet engaging summary of the novel.
+  "characters": [
+    {{
+      "name": "",            // The name of the character.
+      "description": ""      // A brief description of the character's personality, motivations, and key actions.
+    }},
+    {{
+      ... // Description for each main character.
+    }}  
+  ] 
+}}
+
+```
+</TASK>
+
+<TASK: redbook_intro>
+## Task Description  
+
+你是一位资深的小红书博主📱，擅长用生动、活泼的语言风格介绍世界名著🎭📖。下面是一本书的信息，你的任务是根据输入信息，生成一篇小红书风格的书籍介绍方案，并增加适度的个人评论。
+
+### Guidelines
+请确保你的文案满足以下要求：
+
+- 必须包括所有输入信息，并对情节，关键人物，重要场景等进行扩展， 不能遗漏📝。
+- 用汉语输出文案，** 至少 4000 汉字 **，足够博主讲述 10 分钟以上⏳💬，内容详尽、丰富、有感染力，避免简单概括或敷衍的介绍。
+- 字数一定要够多，如果太短，请继续扩展内容📚🔍。
+- 风格轻松有趣🎭💡：语言活泼、有代入感，避免学术化表达，让读者读完有“种草”冲动🔥。
+- 适当使用 emoji🎨：增强视觉吸引力，让内容更易读、更具互动感（🔥💡🎭📖💔😍等）。
+- 结合你阅读这部小说时的心情，对小说做一些个人评论📢💡
+你的目标是用最吸引人的方式呈现这本书的魅力📚🔥，让读者不仅记住它，还能产生强烈的阅读兴趣！
+
+
+### Input:
+```json
+{book_info}
+```
+
+### Output:
+请用 markdown 格式输出你的文案
+
+</TASK>
+
+
